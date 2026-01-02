@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "rules": {
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "@next/next/no-html-link-for-pages": "warn",
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-arrow-callback": "error"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    ".next",
+    "dist",
+    "build"
+  ]
+}
