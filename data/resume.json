@@ -1,0 +1,129 @@
+{
+  "personalInfo": {
+    "fullName": "Mohammad Zohaib Shah",
+    "fatherName": "Mohammad Aslam Shah",
+    "phone": "+92 319 8251617",
+    "email": "zohaib92shah@gmail.com",
+    "address": "Liaquatabad, Karachi, Pakistan",
+    "dateOfBirth": "1994-04-25",
+    "location": "Karachi, Pakistan"
+  },
+  "careerObjective": "Motivated and detail-oriented Web Developer seeking opportunities to utilize skills in front-end technologies and grow with a dynamic organization.",
+  "skills": [
+    {
+      "category": "AI & Web Development",
+      "items": ["AI-Driven Development", "Claude Code", "Spec-Kit Plus", "AI Agents"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Next.js", "Tailwind CSS"]
+    },
+    {
+      "category": "Backend & Databases",
+      "items": ["Python", "SQL", "PL/SQL", "Oracle EBS XML Reports", "Oracle Fusion BI Publisher"]
+    },
+    {
+      "category": "Soft Skills",
+      "items": ["Communication", "Time Management"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Commerce",
+      "institution": "University of Karachi",
+      "year": 2015
+    },
+    {
+      "degree": "Intermediate (Commerce)",
+      "institution": "Board of Intermediate Education, Karachi",
+      "year": 2013
+    },
+    {
+      "degree": "Matriculation (Science)",
+      "institution": "Board of Secondary Education, Karachi",
+      "year": 2011
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Certified AI, Metaverse & Web 3.0 Developer & Solopreneur",
+      "issuer": "Governor Sindh IT Initiative, Karachi",
+      "year": "2023–Present"
+    },
+    {
+      "title": "Oracle Database 11g: SQL Fundamentals I",
+      "issuer": "Orasoft Training Center",
+      "year": 2016
+    },
+    {
+      "title": "Oracle Database 11g: Program with PL/SQL",
+      "issuer": "Orasoft Training Center",
+      "year": 2016
+    },
+    {
+      "title": "Oracle Forms 11g (Fusion Middleware)",
+      "issuer": "Orasoft Training Center",
+      "year": 2016
+    },
+    {
+      "title": "Oracle Reports Developer 11g",
+      "issuer": "Orasoft Training Center",
+      "year": 2016
+    },
+    {
+      "title": "Advanced Diploma in Information Technology (ADIT)",
+      "issuer": "Noor College, Karachi",
+      "year": 2013
+    }
+  ],
+  "experience": [
+    {
+      "role": "Trainee Oracle Developer",
+      "company": "Qitech Pvt Ltd",
+      "startDate": "2025-05-01",
+      "endDate": null,
+      "responsibilities": [
+        "Created XML Data Templates",
+        "Integrated reports with Oracle BI Publisher",
+        "Generated Excel and Word reports",
+        "Worked on data extraction, transformation, and visualization",
+        "Improved reporting accuracy and automation"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Gym Management System",
+      "description": "Member registration, fee tracking, and attendance management",
+      "features": ["Member registration", "Fee tracking", "Attendance management"]
+    },
+    {
+      "title": "Billing System",
+      "description": "Automated product billing and receipt generation for small businesses",
+      "features": ["Automated product billing", "Receipt generation"]
+    },
+    {
+      "title": "Instalment Payment Application",
+      "description": "Customer instalment management with due-date tracking and payment alerts",
+      "features": ["Customer instalment management", "Due-date tracking", "Payment alerts"]
+    }
+  ],
+  "achievements": [
+    "Completed Next.js Hackathon Project (3rd Hackathon)",
+    "Continuous learner in AI and Web Development"
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Intermediate"
+    },
+    {
+      "language": "Urdu",
+      "proficiency": "Fluent"
+    },
+    {
+      "language": "Sindhi",
+      "proficiency": "Fluent"
+    }
+  ]
+}
