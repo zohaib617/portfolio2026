@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/common/ThemeProvider';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { APP_METADATA } from '@/lib/constants';
 import './globals.css';
 
@@ -50,9 +52,11 @@ export default function RootLayout({
       <body className="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300">
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
-            <main className="flex-1">
+            <Header />
+            <main className="flex-1 pt-16">
               {children}
             </main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
