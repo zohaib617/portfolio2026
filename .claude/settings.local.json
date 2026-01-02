@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(sp.constitution)",
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(git fetch:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
