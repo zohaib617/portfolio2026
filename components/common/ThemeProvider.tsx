@@ -13,40 +13,35 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('light');
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Get theme from localStorage or default to 'light' on the server
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem(THEME_CONFIG.storageKey);
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        return savedTheme as Theme;
+      }
+      // Check system preference if no saved theme
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light'; // Default for server-side rendering
+  });
 
-  // Initialize theme on mount
   useEffect(() => {
-    const savedTheme = localStorage.getItem(THEME_CONFIG.storageKey) as Theme | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Apply the theme to the document element
+    const root = document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
 
-    const initialTheme: Theme = savedTheme || (prefersDark ? 'dark' : 'light');
-    setTheme(initialTheme);
-    applyTheme(initialTheme);
-    setMounted(true);
-  }, []);
+    // Update localStorage
+    localStorage.setItem(THEME_CONFIG.storageKey, theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme: Theme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    applyTheme(newTheme);
-    localStorage.setItem(THEME_CONFIG.storageKey, newTheme);
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
   };
-
-  const applyTheme = (newTheme: Theme) => {
-    const html = document.documentElement;
-    if (newTheme === 'dark') {
-      html.classList.add('dark');
-    } else {
-      html.classList.remove('dark');
-    }
-  };
-
-  // Prevent flickering on initial load
-  if (!mounted) {
-    return <>{children}</>;
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

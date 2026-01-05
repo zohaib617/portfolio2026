@@ -26,14 +26,6 @@ export default function Grid({
     xl: 'gap-10',
   };
 
-  const colClasses = `
-    grid
-    grid-cols-${columns.mobile}
-    md:grid-cols-${columns.tablet}
-    lg:grid-cols-${columns.desktop}
-    ${gapClasses[gap]}
-    ${className}
-  `;
 
   // Since Tailwind doesn't support dynamic class names, we use inline style or hardcoded options
   const gridStyle: React.CSSProperties = {

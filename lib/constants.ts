@@ -9,7 +9,6 @@ export const NAVIGATION_LINKS = [
   { label: 'Projects', href: '/projects' },
   { label: 'Extras', href: '/extras' },
   { label: 'Personal', href: '/personal' },
-  { label: 'Chat', href: '/chat' },
 ];
 
 // App Metadata

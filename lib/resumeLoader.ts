@@ -1,5 +1,10 @@
 import { Resume } from '@/types/resume';
 
+// Import resume data directly - using type assertion to handle potential typing issues
+import resumeDataRaw from '@/data/resume.json';
+
+const resumeData = resumeDataRaw as Resume;
+
 let cachedResume: Resume | null = null;
 
 export const resumeLoader = {
@@ -9,9 +14,6 @@ export const resumeLoader = {
     }
 
     try {
-      // Dynamic require for resume.json to ensure it's loaded at runtime
-      const resumeData = require('@/data/resume.json') as Resume;
-
       // Validate resume structure
       validateResume(resumeData);
 

@@ -91,23 +91,41 @@
       ]
     }
   ],
-  "projects": [
-    {
-      "title": "Gym Management System",
-      "description": "Member registration, fee tracking, and attendance management",
-      "features": ["Member registration", "Fee tracking", "Attendance management"]
-    },
-    {
-      "title": "Billing System",
-      "description": "Automated product billing and receipt generation for small businesses",
-      "features": ["Automated product billing", "Receipt generation"]
-    },
-    {
-      "title": "Instalment Payment Application",
-      "description": "Customer instalment management with due-date tracking and payment alerts",
-      "features": ["Customer instalment management", "Due-date tracking", "Payment alerts"]
-    }
-  ],
+"projects": [
+  {
+    "title": "Gym Management System",
+    "description": "Member registration, fee tracking, and attendance management",
+    "features": ["Member registration", "Fee tracking", "Attendance management"],
+    "projectUrl": "https://www.youtube.com/watch?v=TmyQ9leoIOs",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"]
+  },
+  {
+    "title": "Billing System",
+    "description": "Automated product billing and receipt generation for small businesses",
+    "features": ["Automated product billing", "Receipt generation"],
+    "projectUrl": "https://www.youtube.com/watch?v=QA5MNxE23dM",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"]
+  },
+  {
+    "title": "Instalment Payment Application",
+    "description": "Customer instalment management with due-date tracking and payment alerts",
+    "features": ["Customer instalment management", "Due-date tracking", "Payment alerts"],
+    "projectUrl": "https://www.youtube.com/watch?v=jyzzavuqJ0g",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"]
+  },
+  {
+    "title": "Physical AI & Humanoid Robotics",
+    "description": "This project/documentary/book is built on AI-driven development and covers the full journey of designing and implementing humanoid robotics systems. Learn how advanced tools and frameworks were used to bring intelligent robots to life.",
+    "features": [
+      "Design & Implementation of Humanoid Robots",
+      "AI-driven Development Workflow",
+      "Integration with RAG Chatbot",
+      "Project Documentation with Docusaurus"
+    ],
+    "technologies": ["Speckit Plus", "Docusaurus (JavaScript)", "RAG Chatbot", "Qdrant", "AI Agent SDK"],
+    "projectUrl": "https://www.youtube.com/watch?v=CpF7CLcR4Tw"
+  }
+],
   "achievements": [
     "Completed Next.js Hackathon Project (3rd Hackathon)",
     "Continuous learner in AI and Web Development"

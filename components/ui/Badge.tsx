@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
 
 interface BadgeProps {
   children: ReactNode;
@@ -38,11 +39,15 @@ export default function Badge({
   };
 
   return (
-    <span
+    <motion.span
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.2 }}
+      viewport={{ once: true }}
       className={`
         inline-flex items-center gap-1.5
         rounded-full font-medium
-        transition-colors duration-200
         ${variantClasses[variant]}
         ${sizeClasses[size]}
         ${className}
@@ -50,6 +55,6 @@ export default function Badge({
     >
       {icon && <span className="flex-shrink-0">{icon}</span>}
       {children}
-    </span>
+    </motion.span>
   );
 }

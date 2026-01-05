@@ -82,10 +82,7 @@ export default function Footer() {
           <p>
             © {currentYear} Mohammad Zohaib Shah. All rights reserved.
           </p>
-          <p className="mt-2">
-            Built with{' '}
-            <span className="text-red-500">♥</span> using Next.js, TypeScript, and Tailwind CSS
-          </p>
+          
         </div>
       </div>
     </footer>

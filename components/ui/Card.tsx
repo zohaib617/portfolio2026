@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
 
 interface CardProps {
   title?: string;
@@ -11,6 +12,8 @@ interface CardProps {
   hover?: boolean;
   onClick?: () => void;
   gradient?: boolean;
+  delay?: number;
+  animate?: boolean;
 }
 
 export default function Card({
@@ -22,15 +25,21 @@ export default function Card({
   hover = true,
   onClick,
   gradient = false,
+  delay = 0,
+  animate = true,
 }: CardProps) {
   return (
-    <div
+    <motion.div
+      initial={animate ? { opacity: 0, y: 20 } : undefined}
+      whileInView={animate ? { opacity: 1, y: 0 } : undefined}
+      whileHover={hover ? { y: -4, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' } : undefined}
+      transition={{ duration: 0.3, delay }}
+      viewport={{ once: true }}
       onClick={onClick}
       className={`
         rounded-lg border border-slate-200 dark:border-slate-700
         bg-white dark:bg-slate-800 p-6
-        transition-all duration-300
-        ${hover ? 'hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 hover:-translate-y-1 cursor-pointer' : ''}
+        ${hover ? 'cursor-pointer' : ''}
         ${gradient ? 'bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900' : ''}
         ${className}
       `}
@@ -60,6 +69,6 @@ export default function Card({
 
       {/* Card Content */}
       {children}
-    </div>
+    </motion.div>
   );
 }

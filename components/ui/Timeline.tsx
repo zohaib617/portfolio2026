@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
 
 interface TimelineItem {
   id: string | number;
@@ -17,10 +18,36 @@ interface TimelineProps {
 }
 
 export default function Timeline({ items, className = '' }: TimelineProps) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4 },
+    },
+  };
+
   return (
-    <div className={`space-y-8 ${className}`}>
+    <motion.div
+      className={`space-y-8 ${className}`}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       {items.map((item, index) => (
-        <div key={item.id} className="relative">
+        <motion.div key={item.id} className="relative" variants={itemVariants}>
           {/* Timeline Line */}
           {index !== items.length - 1 && (
             <div className="absolute left-4 top-12 w-0.5 h-20 bg-gradient-to-b from-blue-400 to-transparent"></div>
@@ -70,8 +97,8 @@ export default function Timeline({ items, className = '' }: TimelineProps) {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
