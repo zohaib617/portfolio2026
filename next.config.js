@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */ 
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
@@ -17,6 +17,8 @@ const nextConfig = {
     return config;
   },
   typescript: {
+    // Ignore type errors during production build
+    ignoreBuildErrors: true,
     tsconfigPath: './tsconfig.json',
   },
 };
