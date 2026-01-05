@@ -104,12 +104,16 @@ const roles = [
               </div>
 
               {/* Typewriter Display */}
-              <div className="h-10 text-2xl font-bold text-blue-600 dark:text-blue-400 font-mono flex items-center">
+              <div className="h-12 text-3xl font-black tracking-wider text-emerald-500 dark:text-emerald-400 flex items-center">
+
+
+
                 <span>{mounted ? displayText : ''}</span>
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                  className="ml-1 inline-block w-1 h-8 bg-blue-600 dark:bg-blue-400"
+                 className="ml-1 inline-block w-1 h-8 bg-emerald-500 dark:bg-emerald-400"
+
                 />
               </div>
 
