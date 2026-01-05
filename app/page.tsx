@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion'; // Removed AnimatePresence as it's not needed for this typewriter
 import Link from 'next/link';
 import Image from 'next/image';
 import Section from '@/components/ui/Section';
@@ -18,7 +18,6 @@ import {
 
 export default function Home() {
   const resume = resumeLoader.getResume();
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
 
   const roles = [
@@ -31,13 +30,36 @@ export default function Home() {
     'AI Agent Expert',
   ];
 
+  // Typewriter States
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
   useEffect(() => {
     setMounted(true);
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 2800);
-    return () => clearInterval(interval);
-  }, []);
+    
+    const currentFullText = roles[currentRoleIndex] || '';
+    const typingSpeed = isDeleting ? 70 : 30;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        // Character by character typing
+        setDisplayText(currentFullText.substring(0, displayText.length + 1));
+        if (displayText === currentFullText) {
+          setTimeout(() => setIsDeleting(true), 2000); // Pause at end
+        }
+      } else {
+        // Character by character deleting
+        setDisplayText(currentFullText.substring(0, displayText.length - 1));
+        if (displayText === '') {
+          setIsDeleting(false);
+          setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, currentRoleIndex]);
 
   const container = {
     hidden: { opacity: 0 },
@@ -60,7 +82,6 @@ export default function Home() {
         animate={false}
         className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-[#020617] dark:via-slate-900 dark:to-[#020617]"
       >
-        {/* Background Orbs */}
         <div className="absolute inset-0">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl" />
@@ -70,31 +91,32 @@ export default function Home() {
           <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center" variants={container} initial="hidden" animate="show">
             {/* LEFT */}
             <motion.div className="space-y-6" variants={item}>
-              <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-                {resume.personalInfo.fullName}
-              </h1>
+              <div className="space-y-2">
+                <h1 className="text-5xl md:text-7xl font-black tracking-tighter">
+                  <span className="block text-slate-900 dark:text-white">I&apos;m</span>
+                  <span className="relative inline-block">
+                    <span className="absolute -inset-1 blur-2xl bg-blue-600/30 dark:bg-blue-400/20 rounded-full" />
+                    <span className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-300 dark:to-blue-500 bg-clip-text text-transparent">
+                      {resume.personalInfo.fullName}
+                    </span>
+                  </span>
+                </h1>
+              </div>
 
-              <div className="h-10 text-2xl font-semibold text-blue-600 dark:text-blue-400">
-                {mounted && (
-                  <AnimatePresence mode="wait">
-                    <motion.span
-                      key={currentRoleIndex}
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -15 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {roles[currentRoleIndex]}
-                    </motion.span>
-                  </AnimatePresence>
-                )}
+              {/* Typewriter Display */}
+              <div className="h-10 text-2xl font-bold text-blue-600 dark:text-blue-400 font-mono flex items-center">
+                <span>{mounted ? displayText : ''}</span>
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                  className="ml-1 inline-block w-1 h-8 bg-blue-600 dark:bg-blue-400"
+                />
               </div>
 
               <p className="text-slate-600 dark:text-slate-400">📍 {resume.personalInfo.location}</p>
 
               <p className="text-lg text-slate-700 dark:text-slate-300 max-w-xl">{resume.careerObjective}</p>
 
-              {/* Buttons */}
               <div className="flex gap-4 flex-wrap">
                 <Link href="/projects">
                   <motion.button
@@ -116,7 +138,6 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* Social Icons */}
               <div className="flex gap-4 mt-4">
                 {socialLinks.map((social, idx) => (
                   <motion.a
@@ -135,23 +156,20 @@ export default function Home() {
 
             {/* RIGHT — IMAGE POP-OUT */}
             <motion.div
-              className="flex justify-center lg:justify-end"
+              className="flex justify-center lg:justify-end top-10 lg:top-0 relative"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <div className="relative w-80 h-80 overflow-visible">
-                {/* Circle */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 shadow-2xl" />
-                {/* Glow */}
-                <div className="absolute inset-0 rounded-full bg-indigo-500/40 blur-3xl scale-110 -z-10" />
-
+              <div className="relative w-80 h-80 md:w-96 md:h-96">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600 to-indigo-700 shadow-[0_0_50px_rgba(37,99,235,0.3)]" />
+                <div className="absolute inset-[-15px] rounded-full border-2 border-dashed border-blue-400/30 animate-[spin_20s_linear_infinite]" />
                 <motion.div
                   className="absolute inset-0 flex justify-center items-start z-10 pointer-events-none"
                   animate={{ y: [0, -14, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
                 >
-                  <div className="relative w-[170%] h-[210%] -top-56">
+                  <div className="relative w-[170%] h-[210%] -top-56 lg:-top-64 ">
                     <Image
                       src="/profile.png"
                       alt={resume.personalInfo.fullName}
@@ -183,11 +201,11 @@ export default function Home() {
                   <h3 className="font-bold mb-4">{skill.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skill.items.slice(0, 3).map((s, i) => (
-                      <Badge key={`${s}-${i}`} size="sm">
+                      <Badge key={`${s}-${i}`} size="sm" variant="primary">
                         {s}
                       </Badge>
                     ))}
-                    {skill.items.length > 3 && <Badge size="sm">+{skill.items.length - 3}</Badge>}
+                    {skill.items.length > 3 && <Badge size="sm" variant="default">+{skill.items.length - 3}</Badge>}
                   </div>
                 </Card>
               </motion.div>
@@ -221,7 +239,6 @@ export default function Home() {
                       </Badge>
                     ))}
                   </div>
-                  {/* Optional YouTube Embed */}
                   {project.projectUrl && (
                     <div className="mt-4">
                       <iframe
