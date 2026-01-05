@@ -21,13 +21,13 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
 
 const roles = [
-  'AI Engineer',
   'Full-Stack Developer',
-  'Backend Developer (Python & SQL)',
-  'AI Chatbot & Agent Developer',
-  'Modern Web Developer (Next.js)',
-  'AI-Driven Software Developer',
+  'Software Developr',
+  'Backend Developer',
+  'AI Chatbot Developer',
+  'AI-Driven Developer',
 ];
+
 
 
   // Typewriter States
