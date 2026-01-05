@@ -20,15 +20,15 @@ export default function Home() {
   const resume = resumeLoader.getResume();
   const [mounted, setMounted] = useState(false);
 
-  const roles = [
-    'AI Engineer',
-    'AI Chatbot Expert',
-    'AI-Driven Developer',
-    'Web Developer',
-    'Backend Expert',
-    'Software Developer',
-    'AI Agent Expert',
-  ];
+const roles = [
+  'AI Engineer',
+  'Full-Stack Developer',
+  'Backend Developer (Python & SQL)',
+  'AI Chatbot & Agent Developer',
+  'Modern Web Developer (Next.js)',
+  'AI-Driven Software Developer',
+];
+
 
   // Typewriter States
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -117,26 +117,27 @@ export default function Home() {
 
               <p className="text-lg text-slate-700 dark:text-slate-300 max-w-xl">{resume.careerObjective}</p>
 
-              <div className="flex gap-4 flex-wrap">
-                <Link href="/projects">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl"
-                  >
-                    View My Work
-                  </motion.button>
-                </Link>
-                <Link href="/chat">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400"
-                  >
-                    Ask AI Assistant
-                  </motion.button>
-                </Link>
-              </div>
+<div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg">
+  <Link href="/projects" className="flex-1">
+    <motion.button
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="w-full h-[52px] flex items-center justify-center px-8 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl text-sm font-semibold transition-all"
+    >
+      View My Work
+    </motion.button>
+  </Link>
+
+  <Link href="/chat" className="flex-1">
+    <motion.button
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="w-full h-[52px] flex items-center justify-center px-8 rounded-xl border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 text-sm font-semibold bg-transparent hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all"
+    >
+      Ask AI Assistant
+    </motion.button>
+  </Link>
+</div>
 
               <div className="flex gap-4 mt-4">
                 {socialLinks.map((social, idx) => (

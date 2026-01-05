@@ -8,7 +8,7 @@
     "dateOfBirth": "1994-04-25",
     "location": "Karachi, Pakistan"
   },
-  "careerObjective": "Motivated and detail-oriented Web Developer seeking opportunities to utilize skills in front-end technologies and grow with a dynamic organization.",
+  "careerObjective": "I’m an emerging Full-Stack Developer and Software Developer with hands-on experience in Python, SQL databases, and backend development. I specialize in building modern web and software solutions using Next.js, Tailwind CSS, and AI-driven technologies, focusing on scalability, security, and performance.",
   "skills": [
     {
       "category": "AI & Web Development",
@@ -97,21 +97,21 @@
     "description": "Member registration, fee tracking, and attendance management",
     "features": ["Member registration", "Fee tracking", "Attendance management"],
     "projectUrl": "https://www.youtube.com/watch?v=TmyQ9leoIOs",
-    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"]
+    "technologies": ["Python", "HTML", "CSS", "Tkinter","Visual basic","Sqlite3"]
   },
   {
     "title": "Billing System",
     "description": "Automated product billing and receipt generation for small businesses",
     "features": ["Automated product billing", "Receipt generation"],
     "projectUrl": "https://www.youtube.com/watch?v=QA5MNxE23dM",
-    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"]
+    "technologies": ["Python", "HTML", "CSS", "Tkinter","sqlite3"]
   },
   {
     "title": "Instalment Payment Application",
     "description": "Customer instalment management with due-date tracking and payment alerts",
     "features": ["Customer instalment management", "Due-date tracking", "Payment alerts"],
     "projectUrl": "https://www.youtube.com/watch?v=jyzzavuqJ0g",
-    "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js"]
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Supabase"]
   },
   {
     "title": "Physical AI & Humanoid Robotics",
