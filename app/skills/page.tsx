@@ -29,7 +29,7 @@ export default function SkillsPage() {
       </Section>
 
       {/* Skills Overview Section */}
-      <Section title="My Expertise" subtitle="Skills Overview" dark={false}>
+      <Section title="My Expertise" subtitle="Skills Overview" dark={true}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
             {resume.skills.map((category) => (
@@ -80,41 +80,66 @@ export default function SkillsPage() {
           <h2 className="text-3xl font-bold text-white mb-12">Technical Focus Areas</h2>
 
           <Grid columns={{ mobile: 1, tablet: 1, desktop: 2 }} gap="lg">
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">🔧 Full-Stack Development</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Expertise in building complete web applications with modern frameworks and
-                technologies. Proficient in both frontend and backend development with a focus on
-                scalability and maintainability.
-              </p>
-            </Card>
+          <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <h3 className="text-xl font-bold 
+                          text-slate-900 dark:text-slate-100 
+                          mb-4">
+              🔧 Full-Stack Development
+            </h3>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">🤖 AI-Driven Development</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Specialized in AI-driven development methodologies using tools like Claude Code,
-                Spec-Kit Plus, and AI agents. Leveraging AI to augment productivity and code
-                quality.
-              </p>
-            </Card>
+            <p className="leading-relaxed
+                          text-slate-600 dark:text-slate-300">
+              Expertise in building complete web applications with modern frameworks and
+              technologies. Proficient in both frontend and backend development with a focus on
+              scalability and maintainability.
+            </p>
+          </Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">💻 Frontend Excellence</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Strong focus on building intuitive, responsive, and accessible user interfaces
-                using React, Next.js, and Tailwind CSS. Creating delightful user experiences with
-                smooth animations and interactions.
-              </p>
-            </Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">🏗️ Architecture & Design</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Expertise in designing clean, scalable architectures following SOLID principles.
-                Specification-driven development ensuring clear communication and maintainable
-                codebases.
-              </p>
-            </Card>
+<Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+  <h3 className="text-xl font-bold 
+                 text-slate-900 dark:text-slate-100 
+                 mb-4">
+    🤖 AI-Driven Development
+  </h3>
+
+  <p className="leading-relaxed
+                text-slate-600 dark:text-slate-300">
+    Specialized in AI-driven development methodologies using tools like Claude Code,
+    Spec-Kit Plus, and AI agents. Leveraging AI to augment productivity and code
+    quality.
+  </p>
+</Card>
+
+<Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+  <h3 className="text-xl font-bold 
+                 text-slate-900 dark:text-slate-100 
+                 mb-4">
+    💻 Frontend Excellence
+  </h3>
+
+  <p className="leading-relaxed
+                text-slate-600 dark:text-slate-300">
+    Strong focus on building intuitive, responsive, and accessible user interfaces
+    using React, Next.js, and Tailwind CSS. Creating delightful user experiences with
+    smooth animations and interactions.
+  </p>
+</Card>
+
+<Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+  <h3 className="text-xl font-bold 
+                 text-slate-900 dark:text-slate-100 
+                 mb-4">
+    🏗️ Architecture & Design
+  </h3>
+
+  <p className="leading-relaxed
+                text-slate-600 dark:text-slate-300">
+    Expertise in designing clean, scalable architectures following SOLID principles.
+    Specification-driven development ensuring clear communication and maintainable
+    codebases.
+  </p>
+</Card>
           </Grid>
         </div>
       </Section>

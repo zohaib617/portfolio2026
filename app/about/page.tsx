@@ -28,7 +28,7 @@ export default function AboutPage() {
       <Section
         title="Career Objective"
         subtitle="My Professional Vision"
-        dark={false}
+        dark={true}
       >
         <div className="max-w-3xl mx-auto">
           <Card className="bg-blue-50 dark:bg-slate-700 border-blue-200 dark:border-blue-900">
@@ -45,37 +45,61 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-white mb-12">Who I Am</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">🎯 Focus</h3>
-              <p className="text-slate-300 leading-relaxed">
-                AI-driven development with a focus on creating scalable, maintainable web applications
-                using modern technologies like Next.js, React, and TypeScript.
-              </p>
-            </Card>
+            <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+  <h3 className="text-xl font-bold 
+                 text-slate-900 dark:text-slate-100 
+                 mb-4">
+    🎯 Focus
+  </h3>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">💡 Philosophy</h3>
-              <p className="text-slate-300 leading-relaxed">
-                I believe in specification-driven development, clean architecture, and the power of AI
-                to augment human productivity and creativity.
-              </p>
-            </Card>
+  <p className="leading-relaxed
+                text-slate-600 dark:text-slate-300">
+    AI-driven development with a focus on creating scalable, maintainable web applications
+    using modern technologies like Next.js, React, and TypeScript.
+  </p>
+</Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">📚 Learning</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Continuous learner passionate about AI, Web3, and emerging technologies. I stay updated
-                with industry trends and best practices.
-              </p>
-            </Card>
+<Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+  <h3 className="text-xl font-bold 
+                 text-slate-900 dark:text-slate-100 
+                 mb-4">
+    💡 Philosophy
+  </h3>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-xl font-bold text-white mb-4">🚀 Goal</h3>
-              <p className="text-slate-300 leading-relaxed">
-                To build innovative solutions that solve real problems and make a positive impact on
-                businesses and communities.
-              </p>
-            </Card>
+  <p className="leading-relaxed
+                text-slate-600 dark:text-slate-300">
+    I believe in specification-driven development, clean architecture, and the power of AI
+    to augment human productivity and creativity.
+  </p>
+</Card>
+
+<Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+  <h3 className="text-xl font-bold 
+                 text-slate-900 dark:text-slate-100 
+                 mb-4">
+    📚 Learning
+  </h3>
+
+  <p className="leading-relaxed
+                text-slate-600 dark:text-slate-300">
+    Continuous learner passionate about AI, Web3, and emerging technologies. I stay updated
+    with industry trends and best practices.
+  </p>
+</Card>
+
+<Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+  <h3 className="text-xl font-bold 
+                 text-slate-900 dark:text-slate-100 
+                 mb-4">
+    🚀 Goal
+  </h3>
+
+  <p className="leading-relaxed
+                text-slate-600 dark:text-slate-300">
+    To build innovative solutions that solve real problems and make a positive impact on
+    businesses and communities.
+  </p>
+</Card>
           </div>
         </div>
       </Section>

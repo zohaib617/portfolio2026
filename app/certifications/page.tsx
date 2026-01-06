@@ -94,39 +94,55 @@ export default function CertificationsPage() {
           <div className="mt-12 space-y-6">
             <h3 className="text-2xl font-bold text-white">Why These Matter</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="bg-slate-800 border-slate-700">
-                <h4 className="text-lg font-bold text-white mb-3">✓ Expertise Validation</h4>
-                <p className="text-slate-300">
-                  Certifications demonstrate verified knowledge and mastery in specific domains and
-                  technologies.
-                </p>
-              </Card>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+    <h4 className="text-lg font-bold 
+                   text-slate-900 dark:text-slate-100 
+                   mb-3">
+      ✓ Expertise Validation
+    </h4>
+    <p className="text-slate-600 dark:text-slate-300">
+      Certifications demonstrate verified knowledge and mastery in specific domains and
+      technologies.
+    </p>
+  </Card>
 
-              <Card className="bg-slate-800 border-slate-700">
-                <h4 className="text-lg font-bold text-white mb-3">✓ Professional Growth</h4>
-                <p className="text-slate-300">
-                  Continuous pursuit of certifications reflects commitment to staying current with
-                  industry standards.
-                </p>
-              </Card>
+  <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+    <h4 className="text-lg font-bold 
+                   text-slate-900 dark:text-slate-100 
+                   mb-3">
+      ✓ Professional Growth
+    </h4>
+    <p className="text-slate-600 dark:text-slate-300">
+      Continuous pursuit of certifications reflects commitment to staying current with
+      industry standards.
+    </p>
+  </Card>
 
-              <Card className="bg-slate-800 border-slate-700">
-                <h4 className="text-lg font-bold text-white mb-3">✓ Industry Recognition</h4>
-                <p className="text-slate-300">
-                  Recognized credentials from respected organizations enhance professional
-                  credibility.
-                </p>
-              </Card>
+  <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+    <h4 className="text-lg font-bold 
+                   text-slate-900 dark:text-slate-100 
+                   mb-3">
+      ✓ Industry Recognition
+    </h4>
+    <p className="text-slate-600 dark:text-slate-300">
+      Recognized credentials from respected organizations enhance professional
+      credibility.
+    </p>
+  </Card>
 
-              <Card className="bg-slate-800 border-slate-700">
-                <h4 className="text-lg font-bold text-white mb-3">✓ Practical Skills</h4>
-                <p className="text-slate-300">
-                  Certification programs focus on practical, real-world skills applicable to
-                  professional work.
-                </p>
-              </Card>
-            </div>
+  <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+    <h4 className="text-lg font-bold 
+                   text-slate-900 dark:text-slate-100 
+                   mb-3">
+      ✓ Practical Skills
+    </h4>
+    <p className="text-slate-600 dark:text-slate-300">
+      Certification programs focus on practical, real-world skills applicable to
+      professional work.
+    </p>
+  </Card>
+</div>
           </div>
         </div>
       </Section>

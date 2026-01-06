@@ -95,45 +95,61 @@ export default function ExperiencePage() {
       </Section>
 
       {/* Experience Highlights */}
-      <Section dark={true}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12">Professional Strengths</h2>
+<Section dark={true}>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl font-bold text-white mb-12">Professional Strengths</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">🚀 Project Leadership</h3>
-              <p className="text-slate-300">
-                Experienced in leading projects from conception to deployment, ensuring timely
-                delivery and high quality standards.
-              </p>
-            </Card>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-bold 
+                       text-slate-900 dark:text-slate-100 
+                       mb-3">
+          🚀 Project Leadership
+        </h3>
+        <p className="text-slate-600 dark:text-slate-300">
+          Experienced in leading projects from conception to deployment, ensuring timely
+          delivery and high quality standards.
+        </p>
+      </Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">👥 Team Collaboration</h3>
-              <p className="text-slate-300">
-                Strong collaborative skills working with cross-functional teams to achieve common
-                goals and deliver exceptional results.
-              </p>
-            </Card>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-bold 
+                       text-slate-900 dark:text-slate-100 
+                       mb-3">
+          👥 Team Collaboration
+        </h3>
+        <p className="text-slate-600 dark:text-slate-300">
+          Strong collaborative skills working with cross-functional teams to achieve common
+          goals and deliver exceptional results.
+        </p>
+      </Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">🎯 Problem Solving</h3>
-              <p className="text-slate-300">
-                Analytical mindset with ability to break down complex problems and develop scalable
-                solutions.
-              </p>
-            </Card>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-bold 
+                       text-slate-900 dark:text-slate-100 
+                       mb-3">
+          🎯 Problem Solving
+        </h3>
+        <p className="text-slate-600 dark:text-slate-300">
+          Analytical mindset with ability to break down complex problems and develop scalable
+          solutions.
+        </p>
+      </Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">📈 Continuous Improvement</h3>
-              <p className="text-slate-300">
-                Committed to continuous learning and implementing best practices to enhance
-                productivity and code quality.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </Section>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-bold 
+                       text-slate-900 dark:text-slate-100 
+                       mb-3">
+          📈 Continuous Improvement
+        </h3>
+        <p className="text-slate-600 dark:text-slate-300">
+          Committed to continuous learning and implementing best practices to enhance
+          productivity and code quality.
+        </p>
+      </Card>
+    </div>
+  </div>
+</Section>
 
       {/* What I Bring Section */}
       <Section className="bg-slate-50 dark:bg-slate-900">

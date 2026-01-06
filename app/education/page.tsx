@@ -42,37 +42,52 @@ export default function EducationPage() {
       </Section>
 
       {/* Education Highlights */}
-      <Section dark={true}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12">Learning Highlights</h2>
+<Section dark={true}>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-3xl font-bold text-white mb-12">Learning Highlights</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">📚 Comprehensive Curriculum</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Studied a well-rounded curriculum covering software engineering, web technologies,
-                and modern development practices.
-              </p>
-            </Card>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-bold 
+                       text-slate-900 dark:text-slate-100 
+                       mb-3">
+          📚 Comprehensive Curriculum
+        </h3>
+        <p className="text-sm leading-relaxed
+                      text-slate-600 dark:text-slate-300">
+          Studied a well-rounded curriculum covering software engineering, web technologies,
+          and modern development practices.
+        </p>
+      </Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">🎓 Quality Institutions</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Education from reputable institutions that emphasize practical skills and
-                theoretical knowledge in computer science.
-              </p>
-            </Card>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-bold 
+                       text-slate-900 dark:text-slate-100 
+                       mb-3">
+          🎓 Quality Institutions
+        </h3>
+        <p className="text-sm leading-relaxed
+                      text-slate-600 dark:text-slate-300">
+          Education from reputable institutions that emphasize practical skills and
+          theoretical knowledge in computer science.
+        </p>
+      </Card>
 
-            <Card className="bg-slate-800 border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">🚀 Continuous Learning</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Beyond formal education, I continuously learn emerging technologies and stay
-                updated with industry trends.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </Section>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-bold 
+                       text-slate-900 dark:text-slate-100 
+                       mb-3">
+          🚀 Continuous Learning
+        </h3>
+        <p className="text-sm leading-relaxed
+                      text-slate-600 dark:text-slate-300">
+          Beyond formal education, I continuously learn emerging technologies and stay
+          updated with industry trends.
+        </p>
+      </Card>
+    </div>
+  </div>
+</Section>
 
       {/* CTA Section */}
       <Section className="bg-slate-50 dark:bg-slate-900">
